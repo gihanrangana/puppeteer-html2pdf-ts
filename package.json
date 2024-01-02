@@ -25,8 +25,13 @@
     "html to pdf node js api"
   ],
   "author": "Gihan Rangana<itsmerangana@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gihanrangana/puppeteer-html2pdf-ts.git"
+  },
   "license": "ISC",
   "devDependencies": {
+    "typedoc": "^0.25.6",
     "typescript": "^5.3.3"
   },
   "dependencies": {
