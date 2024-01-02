@@ -116,7 +116,4 @@ class html2PDF {
 
 }
 
-
-export type HtmlToPDF = new (template: string) => html2PDF;
-
-export default html2PDF as HtmlToPDF;
+export default html2PDF;
