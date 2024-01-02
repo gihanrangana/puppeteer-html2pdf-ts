@@ -1,6 +1,6 @@
 {
   "name": "puppeteer-html2pdf-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "HTML to PDF Generator for nodejs using puppeteer",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
