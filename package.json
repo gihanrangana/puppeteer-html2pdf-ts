@@ -1,0 +1,36 @@
+{
+  "name": "puppeteer-html2pdf-ts",
+  "version": "1.0.0",
+  "description": "HTML to PDF Generator for nodejs using puppeteer",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "puppeteer pdf",
+    "html2pdf",
+    "html to pdf",
+    "typescript",
+    "cheerio",
+    "html to pdf node js",
+    "node js html to pdf library",
+    "node js html to pdf converter",
+    "how to convert html to pdf in node js",
+    "best html to pdf library for node js",
+    "html to pdf node js example",
+    "html to pdf node js tutorial",
+    "html to pdf node js online",
+    "html to pdf node js free",
+    "html to pdf node js api"
+  ],
+  "author": "Gihan Rangana<itsmerangana@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "cheerio": "1.0.0-rc.12",
+    "puppeteer": "^21.6.1"
+  }
+}
