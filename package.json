@@ -29,7 +29,7 @@
     "type": "git",
     "url": "https://github.com/gihanrangana/puppeteer-html2pdf-ts.git"
   },
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "typedoc": "^0.25.6",
     "typescript": "^5.3.3"
