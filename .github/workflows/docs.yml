@@ -38,6 +38,8 @@ jobs:
         run: pnpm build
 
       - name: Generate docs
+        env:
+            npm_config_open: false
         run: pnpm docs
 
       - name: Setup Pages
