@@ -42,7 +42,7 @@ jobs:
         run: pnpm build
 
       - name: Generate docs
-        run: pnpm docs
+        run: pnpm doc
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
