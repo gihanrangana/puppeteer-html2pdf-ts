@@ -1,0 +1,13 @@
+{
+    "$schema": "https://typedoc.org/schema.json",
+    "entryPoints": ["./index.ts"],
+    "out": "docs",
+    "readme": "README.md",
+    "theme": "default",
+    "exclude": ["**/example/**", "**/dist/**", "**/node_modules/**"],
+    "sourceLinkExternal": true,
+    "gitRevision": "main",
+    "gitRemote": "origin",
+    "navigation": true,
+    "searchInComments": true
+}
