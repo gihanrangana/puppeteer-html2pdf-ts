@@ -1,8 +1,9 @@
-name: Deploy TypeDoc to Pages
+name: Deploy docs to Pages
 
 on:
   push:
     branches: ["main"]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -18,7 +19,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
@@ -38,17 +42,15 @@ jobs:
         run: pnpm build
 
       - name: Generate docs
-        env:
-            npm_config_open: false
         run: pnpm docs
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
-          path: docs
+          path: docs/.vitepress/dist
 
   deploy:
     needs: build

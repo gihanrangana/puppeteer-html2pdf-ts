@@ -6,8 +6,8 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "build": "tsc",
-        "docs": "typedoc --options typedoc.json",
-        "docs:watch": "typedoc --options typedoc.json --watch",
+        "doc": "vitepress build docs",
+        "doc:watch": "vitepress dev docs",
         "lint": "biome check .",
         "lint:fix": "biome check . --write",
         "format": "biome format --write .",
@@ -38,11 +38,11 @@
     "license": "MIT",
     "devDependencies": {
         "@biomejs/biome": "2.4.10",
-        "typedoc": "^0.28.18",
-        "typescript": "^6.0.2"
+        "typescript": "^6.0.2",
+        "vitepress": "^1.6.4"
     },
     "dependencies": {
-        "puppeteer": "^24.40.0",
-        "cheerio": "1.2.0"
+        "cheerio": "1.2.0",
+        "puppeteer": "^24.40.0"
     }
 }
