@@ -40,56 +40,56 @@ import Document from "./document";
  */
 
 class htmlToPdf {
-    private browser: Browser | null = null;
+	private browser: Browser | null = null;
 
-    /**
-     * Initializes the Puppeteer browser
-     *
-     * @param options - Puppeteer launch options
-     * @returns Promise that resolves when the browser is initialized
-     * @throws Error if the browser is already initialized
-     */
-    public async init(options: InitOptions = {}): Promise<void> {
-        if (this.browser) {
-            throw new Error("Browser already initialized");
-        }
+	/**
+	 * Initializes the Puppeteer browser
+	 *
+	 * @param options - Puppeteer launch options
+	 * @returns Promise that resolves when the browser is initialized
+	 * @throws Error if the browser is already initialized
+	 */
+	public async init(options: InitOptions = {}): Promise<void> {
+		if (this.browser) {
+			throw new Error("Browser already initialized");
+		}
 
-        this.browser = await puppeteer.launch({
-            headless: true,
-            ...options,
-        });
-    }
+		this.browser = await puppeteer.launch({
+			headless: true,
+			...options,
+		});
+	}
 
-    /**
-     * Loads a template into the Document class.
-     * @param template - The template to load.
-     * @returns The Document class.
-     * @throws Error if the browser is not initialized.
-     */
-    public loadTemplate(template: string): Document {
+	/**
+	 * Loads a template into the Document class.
+	 * @param template - The template to load.
+	 * @returns The Document class.
+	 * @throws Error if the browser is not initialized.
+	 */
+	public loadTemplate(template: string): Document {
+		if (!this.browser) {
+			throw new Error(
+				"Browser not initialized. Call init() before loadTemplate().",
+			);
+		}
 
-        if (!this.browser) {
-            throw new Error("Browser not initialized. Call init() before loadTemplate().");
-        }
+		return new Document(template, this.browser);
+	}
 
-        return new Document(template, this.browser);
-    }
+	/**
+	 * Closes the Puppeteer browser
+	 *
+	 * @returns Promise that resolves when the browser is closed
+	 * @throws Error if the browser is not initialized.
+	 */
+	public async close(): Promise<void> {
+		if (!this.browser) {
+			throw new Error("Browser not initialized. Call init() before close().");
+		}
 
-    /**
-     * Closes the Puppeteer browser
-     *
-     * @returns Promise that resolves when the browser is closed
-     * @throws Error if the browser is not initialized.
-     */
-    public async close(): Promise<void> {
-        if (!this.browser) {
-            throw new Error("Browser not initialized. Call init() before close().");
-        }
-
-        await this.browser.close();
-        this.browser = null;
-    }
-
+		await this.browser.close();
+		this.browser = null;
+	}
 }
 
 export default htmlToPdf;

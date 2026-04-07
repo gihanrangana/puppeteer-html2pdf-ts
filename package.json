@@ -1,48 +1,48 @@
 {
-    "name": "puppeteer-html2pdf-ts",
-    "version": "2.0.0",
-    "description": "HTML to PDF Generator for nodejs using puppeteer",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "scripts": {
-        "build": "tsc",
-        "doc": "vitepress build docs",
-        "doc:watch": "vitepress dev docs",
-        "lint": "biome check .",
-        "lint:fix": "biome check . --write",
-        "format": "biome format --write .",
-        "format:check": "biome format ."
-    },
-    "keywords": [
-        "puppeteer pdf",
-        "html2pdf",
-        "html to pdf",
-        "typescript",
-        "cheerio",
-        "html to pdf node js",
-        "node js html to pdf library",
-        "node js html to pdf converter",
-        "how to convert html to pdf in node js",
-        "best html to pdf library for node js",
-        "html to pdf node js example",
-        "html to pdf node js tutorial",
-        "html to pdf node js online",
-        "html to pdf node js free",
-        "html to pdf node js api"
-    ],
-    "author": "Gihan Rangana<itsmerangana@gmail.com>",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/gihanrangana/puppeteer-html2pdf-ts.git"
-    },
-    "license": "MIT",
-    "devDependencies": {
-        "@biomejs/biome": "2.4.10",
-        "typescript": "^6.0.2",
-        "vitepress": "^1.6.4"
-    },
-    "dependencies": {
-        "cheerio": "1.2.0",
-        "puppeteer": "^24.40.0"
-    }
+	"name": "puppeteer-html2pdf-ts",
+	"version": "2.0.0",
+	"description": "HTML to PDF Generator for nodejs using puppeteer",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "tsc",
+		"doc": "vitepress build docs",
+		"doc:watch": "vitepress dev docs",
+		"lint": "biome check .",
+		"lint:fix": "biome check . --write",
+		"format": "biome format --write .",
+		"format:check": "biome format ."
+	},
+	"keywords": [
+		"puppeteer pdf",
+		"html2pdf",
+		"html to pdf",
+		"typescript",
+		"cheerio",
+		"html to pdf node js",
+		"node js html to pdf library",
+		"node js html to pdf converter",
+		"how to convert html to pdf in node js",
+		"best html to pdf library for node js",
+		"html to pdf node js example",
+		"html to pdf node js tutorial",
+		"html to pdf node js online",
+		"html to pdf node js free",
+		"html to pdf node js api"
+	],
+	"author": "Gihan Rangana<itsmerangana@gmail.com>",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/gihanrangana/puppeteer-html2pdf-ts.git"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"@biomejs/biome": "2.4.10",
+		"typescript": "^6.0.2",
+		"vitepress": "^1.6.4"
+	},
+	"dependencies": {
+		"cheerio": "1.2.0",
+		"puppeteer": "^24.40.0"
+	}
 }
